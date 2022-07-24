@@ -1,0 +1,22 @@
+url: "https://www.deleidscheflesch.nl" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/sites/ejw/2022" # the subpath of your site, e.g. /blog
+title: "EJW2022" # the name of your site, e.g. ACME Corp.
+
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+
+include:
+    - node_modules/jquery/dist/jquery.min.js
+    - node_modules/popper.js/dist/umd/popper.min.js
+    - node_modules/bootstrap/dist/js/bootstrap.min.js
+    - node_modules/jquery/dist/jquery.min.js.map
+    - node_modules/popper.js/dist/umd/popper.min.js.map
+    - node_modules/bootstrap/dist/js/bootstrap.min.js.map
+# these are imported in default.html. They are, among other things, needed for the collapse.
+exclude: []
+
+collections:
+  commissieleden:
+    output: true

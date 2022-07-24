@@ -1,0 +1,63 @@
+---
+layout: default
+title: Programma
+permalink: /programma/
+---
+<div class="row m-0 p-0">
+    <div class="col-12">
+        <h6 class="text-center">
+            Dit programma is onder voorbehoud van eventuele wijzigingen.
+        </h6>
+    </div>
+</div>
+<div class="row m-0 p-0">
+    <div class="col-xl-4">
+        <h3>Vrijdag</h3>
+        <ul class="list-group shadow">
+            {% for item in site.data.programma_vrijdag %}
+            <li class="list-group-item {% cycle 'bg-tijd-rood', 'bg-tijd-oranje' %}">
+                <h5>{{item.naam}}</h5>
+                <p>{{item.omschrijving}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-xl-4">
+        <h3>Zaterdag</h3>
+        <ul class="list-group shadow">
+            {% for item in site.data.programma_zaterdag %}
+            <li class="list-group-item {% cycle 'bg-tijd-oranje', 'bg-tijd-rood' %}">
+                <h5>{{item.naam}}</h5>
+                <p>{{item.omschrijving}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-xl-4">
+        <h3>Zondag</h3>
+        <ul class="list-group shadow">
+            {% for item in site.data.programma_zondag %}
+            <li class="list-group-item {% cycle 'bg-tijd-rood', 'bg-tijd-oranje' %}">
+                <h5>{{item.naam}}</h5>
+                <p>{{item.omschrijving}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<br>
+{% comment %}
+<div class="row d-none d-lg-flex m-0 p-0">
+    <div class="col-xl-4">
+        <img class="m-2 w-50 mx-auto d-block" src="{{'/assets/images/bloem_blauw.png'| prepend: site.baseurl}}"></img>
+    </div>
+    <div class="col-xl-4">
+        <img class="m-2 w-50 mx-auto d-block" src="{{'/assets/images/bloem_geel.png'| prepend: site.baseurl}}"></img>
+    </div>
+    <div class="col-xl-4">
+        <img class="m-2 w-50 mx-auto d-block" src="{{'/assets/images/bloem_paars.png'| prepend: site.baseurl}}"></img>
+    </div>
+</div>
+<br>
+<br>
+{% endcomment %}

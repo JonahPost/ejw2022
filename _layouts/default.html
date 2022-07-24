@@ -1,0 +1,78 @@
+﻿    <!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <script src="{{'/assets/js/countdown.js'| prepend: site.baseurl}}"></script>
+    <link rel="stylesheet" href="{{'/assets/css/main.css' | prepend: site.baseurl}}">
+    <link rel="icon" href="{{'/assets/images/ejw_finalv2.png'| prepend: site.baseurl}}" type="/image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+ </head>
+  <body class="bg-tijd-zilver h-100 w-100 p-0">
+      {% comment %}
+      <div class="jumbotron text-center row" style="margin-bottom:0">
+          <div class="col-xl-4"></div>
+          <div class="col-xl-4">
+              <h3>EJW2020</h3>
+              <h1>Someren of Love</h1>
+              <p>12 en 13 september</p>
+          </div>
+          <div class="col-xl-4 text-xl-right" style="padding:0px">
+              <a href="{{'/wachten.html'| prepend: site.baseurl}}" class="btn">
+                  <p class="float-xl-right" style="margin:0px">Hoelang moet ik nog wachten?</p><br>
+                  <p class="float-xl-right" id="countdown"></p>
+              </a>
+          </div>
+      </div>
+      {% endcomment %}
+      <header class="row w-100" style="margin:0;">
+          <div class="container h-100">
+              <div class="d-flex h-100 text-center align-items-center">
+                  <div class="w-100 text-white">
+                      <h1 class="display-3">Tijdmachine</h1>
+                      <p class="lead m-0">23-25 september</p>
+                      <a href="{{'/wachten'| prepend: site.baseurl}}" class="lead text-white">
+                          <p class="m-0">Hoelang moet ik nog wachten?</tag></p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </header>
+      {% comment %}
+      <header class="row w-100" style="margin:0;">
+          <div class="overlay"></div>
+          <img class="img-fluid mx-auto d-block" src="{{'/assets/images/banner.jpg'| prepend: site.baseurl}}"></img>
+          <div class="container h-100">
+              <div class="d-flex h-100 text-center align-items-center">
+                  <div class="w-100 text-white">
+                      <h1 class="display-3">Tijdmachine</h1>
+                      <p class="lead m-0">23-25 september</p>
+                      <a href="{{'/wachten'| prepend: site.baseurl}}" class="lead text-white">
+                          <p class="m-0">Hoelang moet ik nog wachten?</tag></p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </header>
+      {% endcomment %}
+      {% include navigation.html %}
+      {{ content }}
+      <footer class="row container-fluid bg-dark row" style="margin:0;">
+          <div class="container d-flex" style="height:100%">
+              <a href="https://www.deleidscheflesch.nl/" class="mr-auto">
+                  <img border="0" alt="DLF" src="{{'/assets/images/dlf__.png'| prepend: site.baseurl}}" height="100%" style="margin:0;min-height:29px">
+              </a>
+              <h6 class="lead text-white align-self-center">Volg ons op instagram</h6>
+              <div class="d-flex">
+                  <a href="https://instagram.com/ejw_deleidscheflesch" class="align-self-center" style="display:block;width:29px;height:29px;margin:auto;margin-right:25px;margin-left:15px;">
+                      <img border="0" alt="Instagram" src="{{'/assets/images/insta_glyph-logo_May2016.png'| prepend: site.baseurl}}" style="filter:invert(100%); min-height:29px; display:block; margin:0;height:100%;width:100%">
+                  </a>
+              </div>
+          </div>
+      </footer>
+  </body>
+</html>

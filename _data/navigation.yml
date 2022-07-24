@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Programma
+  link: /programma/
+- name: Commissie
+  link: /commissie/
+- name: Contact
+  link: /contact/

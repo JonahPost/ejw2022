@@ -1,0 +1,41 @@
+header {
+  position: relative;
+  right: 0;
+  background-color: black;
+  background: url("banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  min-height: 15rem;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}

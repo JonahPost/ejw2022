@@ -1,0 +1,47 @@
+---
+layout: default
+title: About
+permalink: /commissie/
+---
+
+{% comment %} for desktop {% endcomment %}
+<div class="d-none d-md-flex flex-wrap row w-100 m-0" style="text-align:center">
+    {% for commissielid in site.commissieleden %}
+    <div class="border col-xl-3 justify-content-center bg-{% cycle 'tijd-oranje', 'tijd-rood', 'tijd-oranje', 'tijd-rood', 'tijd-rood', 'tijd-oranje', 'tijd-rood', 'tijd-oranje' %}">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="{{'/assets/images/commissieleden/'| prepend: site.baseurl | append: commissielid.foto}}" alt="Avatar" style="width:100%" class="avatar">
+                </div>
+                <div class="flip-card-back">
+                    <img src="{{'/assets/images/commissieleden/'| prepend: site.baseurl | append: commissielid.hippie_foto}}" alt="Avatar" style="width:100%" class="avatar">
+                </div>
+            </div>
+        </div>
+        <h2>{{ commissielid.naam }}</h2>
+        <h3>{{ commissielid.functie }}</h3>
+        <p>{{ commissielid.content | markdownify }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% comment %} for mobile {% endcomment %}
+<div class="d-flex d-md-none flex-wrap row w-100 m-0" style="text-align:center">
+    {% for commissielid in site.commissieleden %}
+    <div class="border col-xl-3 justify-content-center bg-{% cycle 'tijd-oranje', 'tijd-rood'%}">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="{{'/assets/images/commissieleden/'| prepend: site.baseurl | append: commissielid.foto}}" alt="Avatar" style="width:100%" class="avatar">
+                </div>
+                <div class="flip-card-back">
+                    <img src="{{'/assets/images/commissieleden/'| prepend: site.baseurl | append: commissielid.hippie_foto}}" alt="Avatar" style="width:100%" class="avatar">
+                </div>
+            </div>
+        </div>
+        <h2>{{ commissielid.naam }}</h2>
+        <h3>{{ commissielid.functie }}</h3>
+        <p>{{ commissielid.content | markdownify }}</p>
+    </div>
+    {% endfor %}
+</div>
